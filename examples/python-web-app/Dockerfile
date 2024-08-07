@@ -5,7 +5,7 @@ WORKDIR /app
 COPY requirements.txt /app
 COPY devops /app
 
-RUN sudo apt-get update && \
+RUN apt-get update && \
     apt-get install -y python3 python3-pip && \
     pip install -r requirements.txt && \
     cd devops
